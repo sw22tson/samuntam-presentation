@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인공지능의 업무 대체 속도와 분야에 관한 분석과 전망</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="presentation">
+        
+        <!-- Slide 1: Title -->
+        <section class="slide active" id="slide-1">
+            <div class="container center-content">
+                <h1 class="display-xl">인공지능의 업무 대체 속도와 분야에<br>관한 분석과 전망</h1>
+            </div>
+        </section>
+
+        <!-- Slide 2: Intro (Timeline) -->
+        <section class="slide" id="slide-2">
+            <div class="container center-content">
+                <div class="timeline-container">
+                    <div class="timeline-step" id="step-past">
+                        <div class="time-label">과거</div>
+                        <div class="time-desc">증기기관 / 산업혁명</div>
+                        <div class="arrow">↓</div>
+                    </div>
+                    <div class="timeline-step" id="step-recent">
+                        <div class="time-label">근과거</div>
+                        <div class="time-desc">인터넷 / 스마트폰</div>
+                        <div class="arrow">↓</div>
+                    </div>
+                    <div class="timeline-step highlight" id="step-present">
+                        <div class="time-label">현재</div>
+                        <div class="time-desc">AI (인공지능)</div>
+                        <div class="arrow large-arrow" id="ai-arrow">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="dim-overlay" id="slide-2-dim"></div>
+                <div class="hidden-question" id="slide-2-question">
+                    <h2 class="headline-lg">AI는 언제, 어떻게, 얼마나<br>우리의 업무를 대체할 것인가?</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: Hypothesis -->
+        <section class="slide" id="slide-3">
+            <div class="container center-content">
+                <h2 class="headline-md accent-gold">가설</h2>
+                <div class="card elevated mt-lg">
+                    <p class="body-lg text-center" style="max-width: 800px;">
+                        2027년 말까지 소프트웨어 분야에서 시니어 이상의 숙련도를 요구하지 않는 업무는 <strong class="accent-green">60% 이상 AI로 대체</strong>될 것이며, 이후 로보틱스의 개발에 따라 <strong class="accent-gold">물리적 노동을 요구하는 분야</strong>까지 AI가 침투할 것이다.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Research Methods -->
+        <section class="slide" id="slide-4">
+            <div class="container split-screen">
+                <div class="split-left">
+                    <h2 class="headline-md">연구 방법론</h2>
+                    <p class="label-sm mt-sm" style="color: var(--outline);">(사회문화 교과 연계)</p>
+                    
+                    <ul class="method-list mt-lg">
+                        <li>거시적 관점의 문헌 연구법</li>
+                        <li>공신력 있는 2차 자료 수집 및 교차 분석</li>
+                    </ul>
+                </div>
+                <div class="split-right iframe-container">
+                    <iframe src="https://ai-2027.com/" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Background & Animated Graph -->
+        <section class="slide" id="slide-5">
+            <div class="full-iframe-container">
+                <!-- Due to cross-origin iframe security, we cannot auto-scroll the content via JS. 
+                     We apply a CSS animation wrapper as an attempt, or the user can scroll manually. -->
+                <iframe src="https://ai-2027.com/" id="ai-graph-iframe" frameborder="0"></iframe>
+                <!-- An invisible overlay to prompt the user to use mouse wheel -->
+                <div class="scroll-prompt">Scroll Down <br>↓</div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Icons & Trends -->
+        <section class="slide" id="slide-6">
+            <div class="container center-content">
+                <div class="sequential-list" id="slide-6-list">
+                    
+                    <div class="seq-item" data-index="0">
+                        <div class="icon-box">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> <!-- Placeholder for Meta, using generic alert or similar. Let's use a standard meta-like infinity icon -->
+                            <svg viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M20.59 7.41l-2.12-2.12c-.78-.78-2.05-.78-2.83 0L12 8.83 8.36 5.19c-.78-.78-2.05-.78-2.83 0L3.41 7.41c-.78.78-.78 2.05 0 2.83l3.64 3.64-3.64 3.64c-.78.78-.78 2.05 0 2.83l2.12 2.12c.78.78 2.05.78 2.83 0L12 18.83l3.64 3.64c.78.78 2.05.78 2.83 0l2.12-2.12c.78-.78.78-2.05 0-2.83l-3.64-3.64 3.64-3.64c.78-.78.78-2.05 0-2.83z"/></svg>
+                            <!-- Infinity icon for Meta -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8a4 4 0 1 0 0 8h8a4 4 0 1 0 0-8h-8z"/></svg>
+                        </div>
+                        <h3 class="headline-lg-mobile mt-md">주니어급 개발자 10% 이상 해고</h3>
+                    </div>
+
+                    <div class="seq-item" data-index="1">
+                        <div class="icon-box">
+                            <!-- User Icon for Andrej Karpathy -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        </div>
+                        <h3 class="headline-lg-mobile mt-md">5개월간 직접 코딩 0건</h3>
+                    </div>
+
+                    <div class="seq-item" data-index="2">
+                        <div class="icon-box">
+                            <!-- Google Icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                        </div>
+                        <h3 class="headline-lg-mobile mt-md">제미나이 10억 명 돌파</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 7: Prediction Evaluation -->
+        <section class="slide" id="slide-7">
+            <div class="container">
+                <h2 class="headline-md text-center mb-lg">가설 검토 결과</h2>
+                <div class="split-screen evaluation-split">
+                    <!-- Left: Software -->
+                    <div class="eval-card software-eval">
+                        <div class="eval-icon green-check">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <h3 class="headline-md mt-md">소프트웨어 분야</h3>
+                        <div class="eval-result mt-sm label-sm">실현 가능</div>
+                        <div class="eval-desc mt-lg">
+                            <span class="strike">시니어 미만</span>
+                            <span class="arrow-right">➔</span>
+                            <span class="highlight-green">주니어급 업무</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hardware -->
+                    <div class="eval-card hardware-eval">
+                        <div class="eval-icon yellow-warn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <h3 class="headline-md mt-md">물리적 노동 분야</h3>
+                        <div class="eval-result mt-sm label-sm warn-label">근거 부족</div>
+                        <div class="speech-bubble mt-lg">
+                            데이터 불충분
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 8: Conclusion -->
+        <section class="slide" id="slide-8">
+            <div class="container center-content">
+                <div class="conclusion-graphic">
+                    <div class="waves">
+                        <div class="wave wave1"></div>
+                        <div class="wave wave2"></div>
+                        <div class="wave wave3"></div>
+                    </div>
+                    <div class="compass-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button id="prev-btn">◀</button>
+        <span id="slide-counter">1 / 8</span>
+        <button id="next-btn">▶</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

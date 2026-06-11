@@ -119,6 +119,7 @@ html, body {
 /* ---- Fragment System ---- */
 .fragment {
   opacity: 0;
+  pointer-events: none;
   transform: translateY(18px);
   transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
               transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -127,6 +128,7 @@ html, body {
 
 .fragment.visible {
   opacity: 1;
+  pointer-events: auto;
   transform: translateY(0);
 }
 
@@ -694,6 +696,17 @@ html, body {
   cursor: pointer;
 }
 
+.theory-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  z-index: 20;
+  pointer-events: none !important;
+}
+
 .theory-overlay.fragment.visible {
   transition-delay: 0.5s; /* appear after background dims */
 }
@@ -706,28 +719,62 @@ html, body {
   text-align: center;
 }
 
-.logos-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  padding: 30px;
-  border: 1px solid var(--outline-variant);
-  border-radius: var(--rounded-lg);
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.metric-label {
+  font-size: 14px;
+  color: var(--outline);
+}
+
+.logos-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.logos-circle {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 2px solid var(--outline-variant);
   background: var(--surface-container-low);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .logo-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
   font-weight: 700;
+  color: var(--on-surface);
+}
+
+.plus-sign-v2 {
+  font-size: 24px;
+  color: var(--outline);
+}
+
+.terafab-wordmark {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   color: var(--primary);
-  text-align: center;
-  padding: 20px 25px;
-  background: var(--surface-container-highest);
-  border-radius: var(--rounded);
-  min-width: 140px;
 }
 
 .method-item {

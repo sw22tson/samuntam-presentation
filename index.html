@@ -1,191 +1,383 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>인공지능의 업무 대체 속도와 분야에 관한 분석과 전망</title>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="인공지능의 업무 대체 속도와 분야에 관한 분석과 전망 — 사문탐 발표" />
+  <title>인공지능의 업무 대체 — 사문탐 발표</title>
+  <!-- Link external fonts for diagram replica -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div id="presentation">
+
+<div id="presentation-surface">
+  <!-- Progress bar -->
+  <div class="progress-bar" id="progress-bar"></div>
+
+  <!-- ============================================================
+       SLIDE 1 — Title
+       ============================================================ -->
+  <section class="slide slide-title active" data-slide="0">
+    <h1 class="display-xl">인공지능의 업무 대체<br/>속도와 분야에 관한 분석과 전망</h1>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 2 — Introduction / Timeline
+       ============================================================ -->
+  <section class="slide" data-slide="1">
+    <div class="timeline-container" id="timeline-container">
+      <!-- Flat horizontal timeline -->
+      <div class="timeline-flat">
+        <!-- Continuous baseline -->
+        <div class="timeline-baseline"></div>
+        <div class="timeline-baseline timeline-baseline-future fragment" data-frag-group="1-0"></div>
+
+        <!-- Milestone 1 -->
+        <div class="milestone-node milestone-node-1">
+          <div class="milestone-dot"></div>
+          <div class="milestone-info">
+            <div class="milestone-year">18세기 (1760s)</div>
+            <div class="milestone-name">증기기관 / 산업혁명</div>
+            <div class="milestone-type">Steam Engine — Automation of Physical Labor</div>
+          </div>
+        </div>
+
+        <!-- Milestone 2 -->
+        <div class="milestone-node milestone-node-2">
+          <div class="milestone-dot"></div>
+          <div class="milestone-info">
+            <div class="milestone-year">20C 후반 ~ 21C 초</div>
+            <div class="milestone-name">인터넷 / 스마트폰</div>
+            <div class="milestone-type">Internet — Information & Digital Automation</div>
+          </div>
+        </div>
+
+        <!-- Milestone 3 (Fragment — appears on forward) -->
+        <div class="milestone-node milestone-node-3 fragment" data-frag-group="1-0">
+          <div class="milestone-dot milestone-dot-accent"></div>
+          <div class="milestone-info">
+            <div class="milestone-year accent-year">2020s ~ 현재</div>
+            <div class="milestone-name accent-name">인공지능 (AI)</div>
+            <div class="milestone-type">AI — Cognitive & Creative Task Replacement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Question (Fragment 2) -->
+    <div class="key-question fragment" data-frag-group="1-1">
+      <p class="question-display">"AI는 언제, 어떻게, 얼마나<br/>우리의 업무를 대체할 것인가?"</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 3 — Hypothesis
+       ============================================================ -->
+  <section class="slide slide-hypothesis" data-slide="2">
+    <div class="hypothesis-heading">가설</div>
+    <p class="hypothesis-body hypothesis-body-lg">
+      <span class="highlight">2027년 말</span>까지
+      <span class="highlight">소프트웨어 분야</span>에서
+      시니어 이상의 숙련도를 요구하지 않는 업무는
+      <span class="highlight">60% 이상 AI로 대체</span>될 것이며,
+      이후 로보틱스의 개발에 따라 물리적 노동을 요구하는 분야까지 AI가 침투할 것이다.
+    </p>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 4 — Research Methodology
+       ============================================================ -->
+  <section class="slide slide-methodology" data-slide="3">
+    <div class="methodology-left">
+      <h2 class="headline-lg">연구방법론</h2>
+      <div class="method-item">
+        <span class="method-number">01</span>
+        <span class="method-text">거시적 관점의 문헌 연구법</span>
+      </div>
+      <div class="method-item">
+        <span class="method-number">02</span>
+        <span class="method-text">2차 자료 수집 및 교차 분석</span>
+      </div>
+    </div>
+    <div class="methodology-right methodology-right-tall">
+      <!-- AI 2027 Webpage -->
+      <iframe src="https://ai-2027.com/" style="width: 100%; height: 100%; border: none; border-radius: var(--rounded-lg); min-height: 500px;"></iframe>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 5 — Theoretical Background & Data Analysis
+       ============================================================ -->
+  <section class="slide slide-theory" data-slide="4">
+    <h2 class="slide-top-title">AI 2027</h2>
+    <div class="ai2027-diagram" id="ai2027-diagram">
+      <div class="ai2027-graph-container">
+        <div class="ai2027-date-badge" id="ai2027-date">Sep 2025</div>
+        <svg class="ai2027-chart-svg" viewBox="0 0 500 140">
+          <path id="ai2027-path-bot" fill="none" stroke="#666" stroke-width="2" d="M 40,130 C 160,125 300,115 450,100" />
+          <path id="ai2027-path-mid" fill="none" stroke="#444" stroke-width="2" d="M 40,120 C 160,115 300,105 450,90" />
+          <path id="ai2027-path-top" fill="none" stroke="#457A59" stroke-width="2.5" d="M 40,110 C 160,105 300,95 450,80" />
+          
+          <text id="ai2027-milestone-1" x="240" y="100" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">Unreliable Agent</text>
+          <text id="ai2027-milestone-2" x="240" y="100" font-size="10" font-weight="bold" fill="#000" text-anchor="middle" opacity="0">Reliable Agent</text>
+          <text id="ai2027-milestone-3" x="240" y="100" font-size="10" font-weight="bold" fill="#000" text-anchor="middle" opacity="0">Superhuman coder</text>
+          
+          <g id="ai2027-dot-bot" transform="translate(450, 100)"><circle r="5" fill="#000"/><text font-size="7" fill="#fff" text-anchor="middle" dy="2.5">★</text></g>
+          <g id="ai2027-dot-mid" transform="translate(450, 90)"><circle r="5" fill="#000"/><text font-size="6" fill="#fff" text-anchor="middle" dy="2">🌐</text></g>
+          <g id="ai2027-dot-top" transform="translate(450, 80)"><circle r="5" fill="#000"/><text font-size="6" fill="#fff" text-anchor="middle" dy="2">🌀</text></g>
+
+          <text id="ai2027-x-1" x="240" y="135" font-size="10" fill="#000" text-anchor="middle">Dec 2024</text>
+          <text id="ai2027-x-2" x="380" y="135" font-size="10" fill="#000" text-anchor="middle" opacity="0">Apr 2026</text>
+          <text id="ai2027-x-3" x="460" y="135" font-size="10" fill="#000" text-anchor="middle" opacity="0">Mar 2027</text>
+        </svg>
+      </div>
+
+      <div class="ai2027-mid-section">
+        <div class="ai2027-capabilities">
+          <div class="ai2027-cap-label">AI CAPABILITIES</div>
+          <div class="ai2027-cap-grid">
+            <div class="ai2027-cap-item" id="cap-hacking"><span class="cap-icon">🛡️</span> &nbsp;Hacking</div>
+            <div class="ai2027-cap-item" id="cap-bioweapons"><span class="cap-icon">☣️</span> &nbsp;Bioweapons</div>
+            <div class="ai2027-cap-item" id="cap-coding"><span class="cap-icon">&lt;/&gt;</span> &nbsp;Coding</div>
+            <div class="ai2027-cap-item" id="cap-robotics"><span class="cap-icon">🤖</span> &nbsp;Robotics</div>
+            <div class="ai2027-cap-item" id="cap-politics"><span class="cap-icon">🏛️</span> &nbsp;Politics</div>
+            <div class="ai2027-cap-item" id="cap-forecasting"><span class="cap-icon">📈</span> &nbsp;Forecasting</div>
+          </div>
+        </div>
         
-        <!-- Slide 1: Title -->
-        <section class="slide active" id="slide-1">
-            <div class="container center-content">
-                <h1 class="display-xl">인공지능의 업무 대체 속도와 분야에<br>관한 분석과 전망</h1>
-            </div>
-        </section>
+        <div class="ai2027-donut">
+          <svg viewBox="0 0 100 100" class="donut-svg">
+            <circle cx="50" cy="50" r="35" fill="none" stroke="#000" stroke-width="18" />
+            <circle id="donut-grey" cx="50" cy="50" r="35" fill="none" stroke="#333" stroke-width="18" stroke-dasharray="0 219.9" transform="rotate(180 50 50)" />
+            <circle id="donut-green" cx="50" cy="50" r="35" fill="none" stroke="#316C43" stroke-width="18" stroke-dasharray="0 219.9" transform="rotate(100 50 50)" />
+            <text x="50" y="53" text-anchor="middle" font-size="9" font-weight="bold" fill="#000">Compute</text>
+            <!-- White separators -->
+            <line x1="50" y1="50" x2="15" y2="50" stroke="#FCFBF8" stroke-width="2" />
+            <line id="sep-1" x1="50" y1="50" x2="30" y2="85" stroke="#FCFBF8" stroke-width="2" />
+            <line id="sep-2" x1="50" y1="50" x2="70" y2="85" stroke="#FCFBF8" stroke-width="2" />
+            <text x="80" y="30" font-size="10" fill="#fff">🇺🇸</text>
+          </svg>
+        </div>
+      </div>
 
-        <!-- Slide 2: Intro (Timeline) -->
-        <section class="slide" id="slide-2">
-            <div class="container center-content">
-                <div class="timeline-container">
-                    <div class="timeline-step" id="step-past">
-                        <div class="time-label">과거</div>
-                        <div class="time-desc">증기기관 / 산업혁명</div>
-                        <div class="arrow">↓</div>
-                    </div>
-                    <div class="timeline-step" id="step-recent">
-                        <div class="time-label">근과거</div>
-                        <div class="time-desc">인터넷 / 스마트폰</div>
-                        <div class="arrow">↓</div>
-                    </div>
-                    <div class="timeline-step highlight" id="step-present">
-                        <div class="time-label">현재</div>
-                        <div class="time-desc">AI (인공지능)</div>
-                        <div class="arrow large-arrow" id="ai-arrow">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="dim-overlay" id="slide-2-dim"></div>
-                <div class="hidden-question" id="slide-2-question">
-                    <h2 class="headline-lg">AI는 언제, 어떻게, 얼마나<br>우리의 업무를 대체할 것인가?</h2>
-                </div>
-            </div>
-        </section>
+      <div class="ai2027-copies-section">
+        <div class="copies-text">
+          <span id="copies-num">5,000</span> <span id="copies-str">Unreliable Agent copies thinking at 10x human speed</span>
+        </div>
+        <div class="copies-grid" id="ai2027-copies-grid"></div>
+      </div>
 
-        <!-- Slide 3: Hypothesis -->
-        <section class="slide" id="slide-3">
-            <div class="container center-content">
-                <h2 class="headline-md accent-gold">가설</h2>
-                <div class="card elevated mt-lg">
-                    <p class="body-lg text-center" style="max-width: 800px;">
-                        2027년 말까지 소프트웨어 분야에서 시니어 이상의 숙련도를 요구하지 않는 업무는 <strong class="accent-green">60% 이상 AI로 대체</strong>될 것이며, 이후 로보틱스의 개발에 따라 <strong class="accent-gold">물리적 노동을 요구하는 분야</strong>까지 AI가 침투할 것이다.
-                    </p>
-                </div>
-            </div>
-        </section>
+      <div class="ai2027-stats-row">
+        <div class="stat-group">
+          <div class="stat-icon">🌀</div>
+          <div class="stat-col"><div class="stat-lbl">Approval</div><div class="stat-val" id="stat-approval">-25%</div></div>
+          <div class="stat-col"><div class="stat-lbl">Revenue</div><div class="stat-val" id="stat-revenue">US$122억/yr</div></div>
+          <div class="stat-col"><div class="stat-lbl">Valuation</div><div class="stat-val" id="stat-valuation">US$6098억</div></div>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat-group">
+          <div class="stat-icon">🌍</div>
+          <div class="stat-col"><div class="stat-lbl">Importance</div><div class="stat-val" id="stat-importance">1%</div></div>
+          <div class="stat-col"><div class="stat-lbl">Datacenters</div><div class="stat-val" id="stat-datacenters">US$3509억/yr</div></div>
+          <div class="stat-col"><div class="stat-lbl">Timeline</div><div class="stat-val" id="stat-timeline">2040</div></div>
+        </div>
+      </div>
 
-        <!-- Slide 4: Research Methods -->
-        <section class="slide" id="slide-4">
-            <div class="container split-screen">
-                <div class="split-left">
-                    <h2 class="headline-md">연구 방법론</h2>
-                    <p class="label-sm mt-sm" style="color: var(--outline);">(사회문화 교과 연계)</p>
-                    
-                    <ul class="method-list mt-lg">
-                        <li>거시적 관점의 문헌 연구법</li>
-                        <li>공신력 있는 2차 자료 수집 및 교차 분석</li>
-                    </ul>
-                </div>
-                <div class="split-right iframe-container">
-                    <iframe src="https://ai-2027.com/" frameborder="0"></iframe>
-                </div>
-            </div>
-        </section>
+      <div class="ai2027-categories">
+        <div class="cat-col">
+          <div class="cat-lbl">Currently Exists</div>
+          <div class="cat-blocks" id="cat-exists"></div>
+        </div>
+        <div class="cat-col">
+          <div class="cat-lbl" style="color: #316C43;">Emerging Tech</div>
+          <div class="cat-blocks" id="cat-emerging"></div>
+        </div>
+        <div class="cat-col">
+          <div class="cat-lbl">Science Fiction</div>
+          <div class="cat-blocks" id="cat-scifi"></div>
+        </div>
+      </div>
 
-        <!-- Slide 5: Background & Animated Graph -->
-        <section class="slide" id="slide-5">
-            <div class="full-iframe-container">
-                <!-- Due to cross-origin iframe security, we cannot auto-scroll the content via JS. 
-                     We apply a CSS animation wrapper as an attempt, or the user can scroll manually. -->
-                <iframe src="https://ai-2027.com/" id="ai-graph-iframe" frameborder="0"></iframe>
-                <!-- An invisible overlay to prompt the user to use mouse wheel -->
-                <div class="scroll-prompt">Scroll Down <br>↓</div>
-            </div>
-        </section>
-
-        <!-- Slide 6: Icons & Trends -->
-        <section class="slide" id="slide-6">
-            <div class="container center-content">
-                <div class="sequential-list" id="slide-6-list">
-                    
-                    <div class="seq-item" data-index="0">
-                        <div class="icon-box">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg> <!-- Placeholder for Meta, using generic alert or similar. Let's use a standard meta-like infinity icon -->
-                            <svg viewBox="0 0 24 24" fill="currentColor" style="display:none;"><path d="M20.59 7.41l-2.12-2.12c-.78-.78-2.05-.78-2.83 0L12 8.83 8.36 5.19c-.78-.78-2.05-.78-2.83 0L3.41 7.41c-.78.78-.78 2.05 0 2.83l3.64 3.64-3.64 3.64c-.78.78-.78 2.05 0 2.83l2.12 2.12c.78.78 2.05.78 2.83 0L12 18.83l3.64 3.64c.78.78 2.05.78 2.83 0l2.12-2.12c.78-.78.78-2.05 0-2.83l-3.64-3.64 3.64-3.64c.78-.78.78-2.05 0-2.83z"/></svg>
-                            <!-- Infinity icon for Meta -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8a4 4 0 1 0 0 8h8a4 4 0 1 0 0-8h-8z"/></svg>
-                        </div>
-                        <h3 class="headline-lg-mobile mt-md">주니어급 개발자 10% 이상 해고</h3>
-                    </div>
-
-                    <div class="seq-item" data-index="1">
-                        <div class="icon-box">
-                            <!-- User Icon for Andrej Karpathy -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                        </div>
-                        <h3 class="headline-lg-mobile mt-md">5개월간 직접 코딩 0건</h3>
-                    </div>
-
-                    <div class="seq-item" data-index="2">
-                        <div class="icon-box">
-                            <!-- Google Icon -->
-                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
-                        </div>
-                        <h3 class="headline-lg-mobile mt-md">제미나이 10억 명 돌파</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 7: Prediction Evaluation -->
-        <section class="slide" id="slide-7">
-            <div class="container">
-                <h2 class="headline-md text-center mb-lg">가설 검토 결과</h2>
-                <div class="split-screen evaluation-split">
-                    <!-- Left: Software -->
-                    <div class="eval-card software-eval">
-                        <div class="eval-icon green-check">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                        </div>
-                        <h3 class="headline-md mt-md">소프트웨어 분야</h3>
-                        <div class="eval-result mt-sm label-sm">실현 가능</div>
-                        <div class="eval-desc mt-lg">
-                            <span class="strike">시니어 미만</span>
-                            <span class="arrow-right">➔</span>
-                            <span class="highlight-green">주니어급 업무</span>
-                        </div>
-                    </div>
-
-                    <!-- Right: Hardware -->
-                    <div class="eval-card hardware-eval">
-                        <div class="eval-icon yellow-warn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                        </div>
-                        <h3 class="headline-md mt-md">물리적 노동 분야</h3>
-                        <div class="eval-result mt-sm label-sm warn-label">근거 부족</div>
-                        <div class="speech-bubble mt-lg">
-                            데이터 불충분
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Slide 8: Conclusion -->
-        <section class="slide" id="slide-8">
-            <div class="container center-content">
-                <div class="conclusion-graphic">
-                    <div class="waves">
-                        <div class="wave wave1"></div>
-                        <div class="wave wave2"></div>
-                        <div class="wave wave3"></div>
-                    </div>
-                    <div class="compass-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+      <div class="ai2027-slider-container">
+        <input type="range" id="ai2027-slider" min="0" max="4" value="0" step="0.01" />
+      </div>
     </div>
 
-    <!-- Controls -->
-    <div class="controls">
-        <button id="prev-btn">◀</button>
-        <span id="slide-counter">1 / 8</span>
-        <button id="next-btn">▶</button>
+    <!-- Fragment 1: Metrics + Logos overlay -->
+    <div class="theory-overlay fragment" data-frag-group="4-0">
+      <div class="metrics-col">
+        <div class="metric-item">
+          <div class="metric-value">AI 2027</div>
+          <div class="metric-label">Projected Capability Horizon</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">×2.25 <span class="body-md" style="color: var(--outline);">per year</span></div>
+          <div class="metric-label">Compute Scaling Rate</div>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">×10 <span class="body-md" style="color: var(--outline);">by 2027</span></div>
+          <div class="metric-label">Aggregate Capability Multiplier</div>
+        </div>
+      </div>
+      <div class="logos-grid">
+        <div class="logo-item">SAMSUNG</div>
+        <div class="logo-item" style="font-size:28px;">tsmc</div>
+        <div class="logo-item">Google</div>
+        <div class="logo-item" style="letter-spacing:4px;">T E S L A</div>
+      </div>
+      <div class="plus-sign-v2">+</div>
+      <div class="terafab-wordmark">TERAFAB</div>
+    </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 6 — Evidence & Case Studies
+       ============================================================ -->
+  <section class="slide slide-evidence" data-slide="5">
+    <!-- Trueup.io Layoffs Chart (recreated) -->
+    <div class="layoffs-chart-container" id="layoffs-chart">
+      <div class="layoffs-chart-title">
+        <span class="layoffs-title-main">Tech Employees Impacted by Layoffs</span>
+        <span class="layoffs-title-sub">As of June 11, 2026 — source: trueup.io</span>
+      </div>
+      <svg class="layoffs-svg" viewBox="0 0 900 260" preserveAspectRatio="xMidYMid meet">
+        <!-- Baseline -->
+        <line x1="30" y1="220" x2="880" y2="220" stroke="#444748" stroke-width="1" />
+
+        <!-- JUL: 46,591 -->
+        <rect x="40" y="28" width="55" height="192" fill="#353535" rx="2" />
+        <text x="67" y="22" text-anchor="middle" fill="#a6d1af" font-size="10" font-weight="600" font-family="Inter">46,591</text>
+        <text x="67" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">JUL</text>
+
+        <!-- AUG: 6,010 -->
+        <rect x="108" y="196" width="55" height="24" fill="#2a2a2a" rx="2" />
+        <text x="135" y="190" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">6,010</text>
+        <text x="135" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">AUG</text>
+
+        <!-- SEP: 19,613 -->
+        <rect x="176" y="140" width="55" height="80" fill="#353535" rx="2" />
+        <text x="203" y="134" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">19,613</text>
+        <text x="203" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">SEP</text>
+
+        <!-- OCT: 21,504 -->
+        <rect x="244" y="132" width="55" height="88" fill="#353535" rx="2" />
+        <text x="271" y="126" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">21,504</text>
+        <text x="271" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">OCT</text>
+
+        <!-- NOV: 28,826 -->
+        <rect x="312" y="100" width="55" height="120" fill="#353535" rx="2" />
+        <text x="339" y="94" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">28,826</text>
+        <text x="339" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">NOV</text>
+
+        <!-- DEC: 2,769 -->
+        <rect x="380" y="209" width="55" height="11" fill="#2a2a2a" rx="2" />
+        <text x="407" y="203" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">2,769</text>
+        <text x="407" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">DEC</text>
+
+        <!-- JAN 2026: 27,523 -->
+        <rect x="448" y="106" width="55" height="114" fill="#444748" rx="2" />
+        <text x="475" y="100" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">27,523</text>
+        <text x="475" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">JAN</text>
+        <text x="475" y="250" text-anchor="middle" fill="#8e9192" font-size="8" font-family="Inter">2026</text>
+
+        <!-- FEB: 24,631 -->
+        <rect x="516" y="118" width="55" height="102" fill="#444748" rx="2" />
+        <text x="543" y="112" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">24,631</text>
+        <text x="543" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">FEB</text>
+
+        <!-- MAR: 50,389 (highlighted) -->
+        <rect x="584" y="14" width="55" height="206" fill="#1b4229" rx="2" />
+        <text x="611" y="10" text-anchor="middle" fill="#a6d1af" font-size="10" font-weight="700" font-family="Inter">50,389</text>
+        <text x="611" y="238" text-anchor="middle" fill="#a6d1af" font-size="10" font-weight="700" font-family="Inter">MAR</text>
+
+        <!-- APR: 12,076 -->
+        <rect x="652" y="170" width="55" height="50" fill="#444748" rx="2" />
+        <text x="679" y="164" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">12,076</text>
+        <text x="679" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">APR</text>
+
+        <!-- MAY: 34,571 -->
+        <rect x="720" y="78" width="55" height="142" fill="#1b4229" rx="2" />
+        <text x="747" y="72" text-anchor="middle" fill="#a6d1af" font-size="10" font-weight="700" font-family="Inter">34,571</text>
+        <text x="747" y="238" text-anchor="middle" fill="#a6d1af" font-size="10" font-weight="700" font-family="Inter">MAY</text>
+
+        <!-- JUN: 2,303 -->
+        <rect x="788" y="210" width="55" height="10" fill="#2a2a2a" rx="2" />
+        <text x="815" y="204" text-anchor="middle" fill="#8e9192" font-size="9" font-weight="500" font-family="Inter">2,303</text>
+        <text x="815" y="238" text-anchor="middle" fill="#8e9192" font-size="10" font-weight="600" font-family="Inter">JUN</text>
+      </svg>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Evidence card: Meta only -->
+    <div class="evidence-cards">
+      <div class="evidence-card fragment" data-frag-group="5-0" id="ev-card-1">
+        <div class="evidence-icon evidence-icon-meta">
+          <!-- Meta infinity SVG logo -->
+          <svg viewBox="0 0 100 60" width="36" height="22">
+            <path d="M25,30 C25,15 35,8 42,8 C52,8 55,20 58,30 C61,40 64,52 74,52 C84,52 90,42 90,30 C90,18 84,8 74,8 C64,8 61,20 58,30 C55,40 52,52 42,52 C35,52 25,45 25,30 Z" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" />
+          </svg>
+        </div>
+        <div class="evidence-text">주니어급 개발자 <strong>10% 이상 해고</strong> — AI 코딩 도구 도입에 따른 인력 구조조정</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 7 — Hypothesis Evaluation / Conclusion
+       ============================================================ -->
+  <section class="slide slide-conclusion" data-slide="6">
+    <div class="conclusion-heading">결론</div>
+    <!-- Dummy fragments to trigger script state -->
+    <div class="fragment" data-frag-group="6-0" style="display:none;"></div>
+    <div class="fragment" data-frag-group="6-1" style="display:none;"></div>
+    
+    <div class="thesis-text thesis-text-lg">
+      <span class="highlight">2027년 말</span>까지
+      <span class="highlight">소프트웨어 분야</span>에서
+      <span class="strike-target" id="strike-1">시니어 이상의 숙련도를 요구하지 않는</span><span class="correction-text" id="correction-1">주니어급</span>
+      업무는 <span class="highlight">60% 이상 AI로 대체</span>될 것이며,<br/>
+      <span class="strike-target" id="strike-2">이후 로보틱스의 개발에 따라 물리적 노동을 요구하는 분야까지 AI가 침투할 것이다.</span>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SLIDE 8 — Conclusion & Future Outlook (Compass)
+       ============================================================ -->
+  <section class="slide slide-compass" data-slide="7">
+    <div class="compass-container">
+      <svg class="compass-svg" viewBox="0 0 220 220">
+        <!-- Outer ring -->
+        <circle class="compass-ring" cx="110" cy="110" r="100" />
+        <circle class="compass-ring" cx="110" cy="110" r="85" stroke-dasharray="2 8" />
+        <!-- Ticks -->
+        <line class="compass-tick" x1="110" y1="12" x2="110" y2="22" />
+        <line class="compass-tick" x1="110" y1="198" x2="110" y2="208" />
+        <line class="compass-tick" x1="12" y1="110" x2="22" y2="110" />
+        <line class="compass-tick" x1="198" y1="110" x2="208" y2="110" />
+        <!-- Cardinal labels -->
+        <text class="compass-cardinal" x="110" y="36">N</text>
+        <text class="compass-cardinal" x="110" y="192">S</text>
+        <text class="compass-cardinal" x="36" y="114">W</text>
+        <text class="compass-cardinal" x="184" y="114">E</text>
+        <!-- Needle group (animated) -->
+        <g class="compass-needle">
+          <!-- North half -->
+          <polygon class="compass-needle-north" points="110,35 104,110 116,110" />
+          <!-- South half -->
+          <polygon class="compass-needle-south" points="110,185 104,110 116,110" />
+        </g>
+        <!-- Center dot -->
+        <circle class="compass-center-dot" cx="110" cy="110" r="5" />
+      </svg>
+    </div>
+    <p class="body-lg" style="text-align:center; color: var(--outline); max-width: 400px;">
+      불확실한 미래를 향해 —<br/>방향을 잡아 나가야 할 때
+    </p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

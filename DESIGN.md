@@ -21,14 +21,14 @@ colors:
   primary-container: '#e2e2e2'
   on-primary-container: '#636565'
   inverse-primary: '#5d5f5f'
-  secondary: '#90d6a4'
-  on-secondary: '#00391c'
-  secondary-container: '#04522c'
-  on-secondary-container: '#7fc494'
+  secondary: '#a6d1af'
+  on-secondary: '#10381f'
+  secondary-container: '#284f35'
+  on-secondary-container: '#95bf9e'
   tertiary: '#ffffff'
-  on-tertiary: '#3e2e00'
-  tertiary-container: '#ffdf93'
-  on-tertiary-container: '#7d6000'
+  on-tertiary: '#3d2e00'
+  tertiary-container: '#fde097'
+  on-tertiary-container: '#776226'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
@@ -37,36 +37,36 @@ colors:
   primary-fixed-dim: '#c6c6c7'
   on-primary-fixed: '#1a1c1c'
   on-primary-fixed-variant: '#454747'
-  secondary-fixed: '#acf3bf'
-  secondary-fixed-dim: '#90d6a4'
+  secondary-fixed: '#c1edca'
+  secondary-fixed-dim: '#a6d1af'
   on-secondary-fixed: '#00210e'
-  on-secondary-fixed-variant: '#04522c'
-  tertiary-fixed: '#ffdf93'
-  tertiary-fixed-dim: '#f3c022'
+  on-secondary-fixed-variant: '#284f35'
+  tertiary-fixed: '#fde097'
+  tertiary-fixed-dim: '#dfc47e'
   on-tertiary-fixed: '#241a00'
-  on-tertiary-fixed-variant: '#594400'
+  on-tertiary-fixed-variant: '#574409'
   background: '#131313'
   on-background: '#e2e2e2'
   surface-variant: '#353535'
 typography:
   display-xl:
-    fontFamily: Newsreader
+    fontFamily: Geist
     fontSize: 64px
     fontWeight: '400'
     lineHeight: 72px
     letterSpacing: -0.02em
   headline-lg:
-    fontFamily: Newsreader
+    fontFamily: Geist
     fontSize: 40px
     fontWeight: '500'
     lineHeight: 48px
   headline-lg-mobile:
-    fontFamily: Newsreader
+    fontFamily: Geist
     fontSize: 32px
     fontWeight: '500'
     lineHeight: 40px
   headline-md:
-    fontFamily: Newsreader
+    fontFamily: Geist
     fontSize: 24px
     fontWeight: '600'
     lineHeight: 32px
@@ -86,11 +86,6 @@ typography:
     fontWeight: '500'
     lineHeight: 16px
     letterSpacing: 0.05em
-  mono:
-    fontFamily: Geist
-    fontSize: 14px
-    fontWeight: '400'
-    lineHeight: 20px
 rounded:
   sm: 0.125rem
   DEFAULT: 0.25rem
@@ -118,14 +113,14 @@ The style is a fusion of **Minimalism** and **High-Contrast Editorial**. It reli
 This design system operates on an absolute black (`#000000`) canvas to maximize the luminance of text and accents. 
 
 - **Primary:** Pure White is used for core content and primary interactions to ensure maximum readability.
-- **Secondary (Forest Green):** Reserved for growth, stability, and "Expert" tier information. It signifies organic development and environmental focus.
-- **Tertiary (Golden Ochre):** A vibrant yellow-gold (`#fdc92d`) used for critical alerts, high-priority highlights, and active states that require immediate visual attention. It provides a warm, high-energy contrast to the cooler forest tones.
+- **Secondary (Deep Forest):** A dark, saturated green (`#1b4229`) reserved for growth, stability, and "Expert" tier information. It signifies organic development and authoritative presence with a muted, professional tone.
+- **Tertiary (Muted Bronze):** A desaturated, earthy gold (`#69551a`) used for secondary highlights, specialized metadata, and subtle callouts. It provides a sophisticated, low-key contrast that evokes the feeling of premium print materials.
 - **Neutrals:** A range of deep charcoals is used to define boundaries and surfaces without breaking the monochromatic depth.
 
 ## Typography
-Typography is the cornerstone of this design system. We utilize **Newsreader** for headlines to provide a literary, authoritative voice with its distinct serif characteristics. For body text and functional UI, **Geist** provides a clinical, precise, and highly legible sans-serif counterpart.
+Typography is the cornerstone of this design system. We utilize **Geist** across all typographic scales to provide a clinical, precise, and highly legible technical voice. By moving away from serifs, the system adopts a more modern, streamlined aesthetic that emphasizes structural clarity.
 
-Headlines should utilize wide margins and asymmetrical placement. For display text, "optical sizing" should be prioritized, ensuring that larger headers feel elegant and thin, while smaller sub-headers maintain structural integrity. Body text utilizes a slightly increased line-height to ensure comfort during long-form reading sessions.
+Headlines should utilize wide margins and asymmetrical placement. For display text, Geist's clean lines ensure that larger headers feel modern and architectural. Body text utilizes a slightly increased line-height to ensure comfort during long-form reading sessions, maintaining the system's focus on deep work and readability.
 
 ## Layout & Spacing
 The layout follows a **Fixed Grid** philosophy on desktop to maintain the "page-like" feel of a physical editorial. A 12-column grid is used with generous gutters to allow content to breathe. 
@@ -143,7 +138,7 @@ In this design system, depth is conveyed through **Tonal Layers** rather than sh
 - **Level 1 (Cards/Containers):** `#0A0A0A` (Subtle lift)
 - **Level 2 (Modals/Overlays):** `#141414` (Distinct lift)
 
-To maintain a sharp, editorial feel, use **Low-Contrast Outlines** (`#FFFFFF` at 10% opacity) instead of drop shadows. When a component requires extreme focus, a 1px border using the Forest Green accent can be applied to signify its importance.
+To maintain a sharp, editorial feel, use **Low-Contrast Outlines** (`#FFFFFF` at 10% opacity) instead of drop shadows. When a component requires extreme focus, a 1px border using the Deep Forest accent can be applied to signify its importance.
 
 ## Shapes
 The shape language is primarily **Soft** and architectural. We avoid aggressive rounding to maintain a professional and "serious" tone. 
@@ -153,9 +148,9 @@ The shape language is primarily **Soft** and architectural. We avoid aggressive 
 - Strictly avoid pill-shapes except for status indicators (chips) that need to be instantly distinguishable from buttons.
 
 ## Components
-- **Buttons:** Primary buttons are solid White with Black text. Secondary buttons are outlined in Forest Green with Forest Green text. Tertiary actions are plain text with the Golden Ochre accent.
-- **Chips:** Small, pill-shaped elements. Use the Golden Ochre background with Black text for urgent categorization and Forest Green for "Featured" or "Premium" status.
-- **Inputs:** Minimalist bottom-border style or fully enclosed with a 1px `#1A1A1A` border. On focus, the border transitions to Forest Green.
-- **Cards:** Use the Level 1 elevated surface (`#0A0A0A`) with a very thin border. Headlines within cards should always be serif.
-- **Diagrams & Highlights:** Use Golden Ochre for alerts, warnings, or "breaking" data points. Use Forest Green for growth trends or "Expert" verification.
-- **Text Highlighting:** For inline highlights, use a 20% opacity Forest Green background with a Forest Green bottom-border for maximum editorial impact.
+- **Buttons:** Primary buttons are solid White with Black text. Secondary buttons are outlined in Deep Forest Green with Deep Forest Green text. Tertiary actions are plain text with the Muted Bronze accent.
+- **Chips:** Small, pill-shaped elements. Use the Muted Bronze background with White text for categorization and Deep Forest Green for "Featured" or "Premium" status.
+- **Inputs:** Minimalist bottom-border style or fully enclosed with a 1px `#1A1A1A` border. On focus, the border transitions to Deep Forest Green.
+- **Cards:** Use the Level 1 elevated surface (`#0A0A0A`) with a very thin border. Headlines within cards follow the unified sans-serif direction.
+- **Diagrams & Highlights:** Use Muted Bronze for historical context or secondary annotations. Use Deep Forest Green for growth trends or "Expert" verification.
+- **Text Highlighting:** For inline highlights, use a 20% opacity Deep Forest Green background with a Deep Forest Green bottom-border for maximum editorial impact.

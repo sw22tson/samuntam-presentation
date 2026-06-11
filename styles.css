@@ -464,7 +464,7 @@ html, body {
 }
 
 .ai2027-diagram.dimmed > *:not(.theory-overlay) {
-  opacity: 0.15;
+  opacity: 0.03;
 }
 
 .ai2027-graph-container {

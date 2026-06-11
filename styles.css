@@ -429,10 +429,10 @@ html, body {
    =========================================================== */
 .slide-top-title {
   position: absolute;
-  top: 30px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 28px;
+  font-size: 38px;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: 0.05em;
@@ -442,8 +442,9 @@ html, body {
 .ai2027-diagram {
   width: 900px;
   height: auto;
-  background: #FCFBF8;
-  color: #000;
+  background: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
   border-radius: 12px;
   padding: 30px 40px;
   display: flex;
@@ -470,8 +471,9 @@ html, body {
 .ai2027-date-badge {
   position: absolute;
   top: 0; left: 0;
-  background: #000;
-  color: #fff;
+  background: var(--surface-container-highest);
+  color: var(--on-surface);
+  border: 1px solid var(--outline-variant);
   padding: 6px 14px;
   border-radius: 6px;
   font-weight: bold;
@@ -502,7 +504,7 @@ html, body {
 .ai2027-cap-label {
   font-size: 11px;
   font-weight: bold;
-  color: #666;
+  color: var(--outline);
   letter-spacing: 0.1em;
   transform: rotate(-90deg);
   white-space: nowrap;
@@ -516,14 +518,14 @@ html, body {
 }
 
 .ai2027-cap-item {
-  border: 2px solid #000;
+  border: 2px solid var(--outline);
   padding: 8px 12px;
   border-radius: 6px;
   font-weight: bold;
   font-size: 12px;
   font-family: sans-serif;
   background: transparent;
-  color: #000;
+  color: var(--on-surface);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -531,8 +533,9 @@ html, body {
 }
 
 .ai2027-cap-item.black {
-  background: #000;
-  color: #fff;
+  background: var(--surface-container-highest);
+  color: var(--on-surface);
+  border-color: var(--surface-container-highest);
 }
 
 .ai2027-cap-item.green {
@@ -557,7 +560,7 @@ html, body {
 .copies-text {
   font-size: 11px;
   font-weight: bold;
-  color: #000;
+  color: var(--on-surface);
 }
 
 .copies-grid {
@@ -578,8 +581,8 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid var(--outline-variant);
+  border-bottom: 1px solid var(--outline-variant);
   padding: 15px 0;
   margin: 5px 0;
 }
@@ -601,18 +604,18 @@ html, body {
 
 .stat-lbl {
   font-size: 10px;
-  color: #555;
+  color: var(--outline);
 }
 
 .stat-val {
   font-size: 14px;
   font-weight: bold;
-  color: #000;
+  color: var(--on-surface);
 }
 
 .stat-divider {
   font-size: 24px;
-  color: #999;
+  color: var(--outline-variant);
 }
 
 .ai2027-categories {
@@ -631,7 +634,7 @@ html, body {
 .cat-lbl {
   font-size: 11px;
   font-weight: bold;
-  color: #555;
+  color: var(--outline);
 }
 
 .cat-blocks {
@@ -645,22 +648,23 @@ html, body {
   width: 14px;
   height: 14px;
   border-radius: 4px;
-  background: #000;
+  background: var(--surface-container-highest);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: var(--on-surface);
   font-size: 9px;
 }
 
 .cat-block.green {
   background: #316C43;
+  color: #fff;
 }
 
 .cat-block.outline {
   background: transparent;
-  border: 1.5px solid #000;
-  color: #000;
+  border: 1.5px solid var(--outline);
+  color: var(--on-surface);
 }
 
 .ai2027-slider-container {

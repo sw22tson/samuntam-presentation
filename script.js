@@ -531,19 +531,32 @@
     const blocks = Math.round(lerp(current.blocks, next.blocks, ratio));
     const gridEl = document.getElementById('ai2027-copies-grid');
     if (gridEl) {
-      gridEl.childNodes.forEach((block, i) => {
-        block.style.opacity = (i < blocks) ? '1' : '0';
+      Array.from(gridEl.children).forEach((block, i) => {
+        if(block && block.style) {
+          block.style.opacity = (i < blocks) ? '1' : '0';
+        }
       });
     }
 
     // Stats
-    document.getElementById('stat-approval').textContent = Math.round(lerp(current.approval, next.approval, ratio)) + '%';
-    document.getElementById('stat-revenue').textContent = 'US$' + Math.round(lerp(current.revenue, next.revenue, ratio)) + '억/yr';
+    const elApp = document.getElementById('stat-approval');
+    if (elApp) elApp.textContent = Math.round(lerp(current.approval, next.approval, ratio)) + '%';
+    
+    const elRev = document.getElementById('stat-revenue');
+    if (elRev) elRev.textContent = 'US$' + Math.round(lerp(current.revenue, next.revenue, ratio)) + '억/yr';
+    
     let val = Math.round(lerp(current.valuation, next.valuation, ratio));
-    document.getElementById('stat-valuation').textContent = val >= 1000 ? ('US$' + (val/1000) + '조') : ('US$' + val + '억');
-    document.getElementById('stat-importance').textContent = Math.round(lerp(current.importance, next.importance, ratio)) + '%';
-    document.getElementById('stat-datacenters').textContent = 'US$' + Math.round(lerp(current.datacenters, next.datacenters, ratio)) + '억/yr';
-    document.getElementById('stat-timeline').textContent = Math.round(lerp(current.timeline, next.timeline, ratio));
+    const elVal = document.getElementById('stat-valuation');
+    if (elVal) elVal.textContent = val >= 1000 ? ('US$' + (val/1000) + '조') : ('US$' + val + '억');
+    
+    const elImp = document.getElementById('stat-importance');
+    if (elImp) elImp.textContent = Math.round(lerp(current.importance, next.importance, ratio)) + '%';
+    
+    const elDat = document.getElementById('stat-datacenters');
+    if (elDat) elDat.textContent = 'US$' + Math.round(lerp(current.datacenters, next.datacenters, ratio)) + '억/yr';
+    
+    const elTim = document.getElementById('stat-timeline');
+    if (elTim) elTim.textContent = Math.round(lerp(current.timeline, next.timeline, ratio));
 
     // Categories
     renderCatBlocks('cat-exists', target.catEx, target.catExSpc, '🚗');

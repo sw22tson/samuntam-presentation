@@ -457,10 +457,13 @@ html, body {
   transform-origin: center;
   position: relative;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.ai2027-diagram > * {
   transition: opacity 0.5s ease;
 }
 
-.ai2027-diagram.dimmed {
+.ai2027-diagram.dimmed > *:not(.theory-overlay) {
   opacity: 0.15;
 }
 

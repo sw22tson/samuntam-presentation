@@ -974,7 +974,7 @@ html, body {
 .layoffs-chart-container {
   width: 100%;
   max-width: var(--container-max);
-  height: 280px;
+  height: 480px;
   border: 1px solid var(--outline-variant);
   border-radius: var(--rounded-lg);
   background: var(--level-1);

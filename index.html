@@ -112,7 +112,6 @@
   <section class="slide slide-theory" data-slide="4">
     <h2 class="slide-top-title">AI 2027</h2>
     <div class="ai2027-diagram" id="ai2027-diagram">
-      <div class="ai2027-content" id="ai2027-content">
       <div class="ai2027-graph-container">
         <div class="ai2027-date-badge" id="ai2027-date">Sep 2025</div>
         <svg class="ai2027-chart-svg" viewBox="0 0 500 140">
@@ -198,98 +197,11 @@
           <div class="cat-lbl">Science Fiction</div>
           <div class="cat-blocks" id="cat-scifi"></div>
         </div>
-        <div class="ai2027-graph-container">
-          <div class="ai2027-date-badge" id="ai2027-date">Sep 2025</div>
-          <svg class="ai2027-chart-svg" viewBox="0 0 500 140">
-            <path id="ai2027-path-bot" fill="none" stroke="#666" stroke-width="2" d="M 40,130 C 160,125 300,115 450,100" />
-            <path id="ai2027-path-mid" fill="none" stroke="#888" stroke-width="2" d="M 40,120 C 160,115 300,105 450,90" />
-            <path id="ai2027-path-top" fill="none" stroke="#A6D1AF" stroke-width="2.5" d="M 40,110 C 160,105 300,95 450,80" />
-            
-            <text id="ai2027-milestone-1" x="240" y="100" font-size="10" font-weight="bold" fill="#ddd" text-anchor="middle">Unreliable Agent</text>
-            <text id="ai2027-milestone-2" x="240" y="100" font-size="10" font-weight="bold" fill="#ddd" text-anchor="middle" opacity="0">Reliable Agent</text>
-            <text id="ai2027-milestone-3" x="240" y="100" font-size="10" font-weight="bold" fill="#ddd" text-anchor="middle" opacity="0">Superhuman coder</text>
-            
-            <g id="ai2027-dot-bot" transform="translate(450, 100)"><circle r="5" fill="#444" stroke="#888"/><text font-size="7" fill="#fff" text-anchor="middle" dy="2.5">★</text></g>
-            <g id="ai2027-dot-mid" transform="translate(450, 90)"><circle r="5" fill="#444" stroke="#888"/><text font-size="6" fill="#fff" text-anchor="middle" dy="2">🌐</text></g>
-            <g id="ai2027-dot-top" transform="translate(450, 80)"><circle r="5" fill="#1b4229" stroke="#A6D1AF"/><text font-size="6" fill="#fff" text-anchor="middle" dy="2">🌀</text></g>
+      </div>
 
-            <text id="ai2027-x-1" x="240" y="135" font-size="10" fill="#999" text-anchor="middle">Dec 2024</text>
-            <text id="ai2027-x-2" x="380" y="135" font-size="10" fill="#999" text-anchor="middle" opacity="0">Apr 2026</text>
-            <text id="ai2027-x-3" x="460" y="135" font-size="10" fill="#999" text-anchor="middle" opacity="0">Mar 2027</text>
-          </svg>
-        </div>
-
-        <div class="ai2027-mid-section">
-          <div class="ai2027-capabilities">
-            <div class="ai2027-cap-label">AI CAPABILITIES</div>
-            <div class="ai2027-cap-grid">
-              <div class="ai2027-cap-item" id="cap-hacking"><span class="cap-icon">🛡️</span> &nbsp;Hacking</div>
-              <div class="ai2027-cap-item" id="cap-bioweapons"><span class="cap-icon">☣️</span> &nbsp;Bioweapons</div>
-              <div class="ai2027-cap-item" id="cap-coding"><span class="cap-icon">&lt;/&gt;</span> &nbsp;Coding</div>
-              <div class="ai2027-cap-item" id="cap-robotics"><span class="cap-icon">🤖</span> &nbsp;Robotics</div>
-              <div class="ai2027-cap-item" id="cap-politics"><span class="cap-icon">🏛️</span> &nbsp;Politics</div>
-              <div class="ai2027-cap-item" id="cap-forecasting"><span class="cap-icon">📈</span> &nbsp;Forecasting</div>
-            </div>
-          </div>
-          
-          <div class="ai2027-donut">
-            <svg viewBox="0 0 100 100" class="donut-svg">
-              <circle cx="50" cy="50" r="35" fill="none" stroke="#222" stroke-width="18" />
-              <circle id="donut-grey" cx="50" cy="50" r="35" fill="none" stroke="#444" stroke-width="18" stroke-dasharray="0 219.9" transform="rotate(180 50 50)" />
-              <circle id="donut-green" cx="50" cy="50" r="35" fill="none" stroke="#A6D1AF" stroke-width="18" stroke-dasharray="0 219.9" transform="rotate(100 50 50)" />
-              <text x="50" y="53" text-anchor="middle" font-size="9" font-weight="bold" fill="#ddd">Compute</text>
-              <!-- White separators -->
-              <line x1="50" y1="50" x2="15" y2="50" stroke="var(--surface)" stroke-width="2" />
-              <line id="sep-1" x1="50" y1="50" x2="30" y2="85" stroke="var(--surface)" stroke-width="2" />
-              <line id="sep-2" x1="50" y1="50" x2="70" y2="85" stroke="var(--surface)" stroke-width="2" />
-              <text x="80" y="30" font-size="10" fill="#fff">🇺🇸</text>
-            </svg>
-          </div>
-        </div>
-
-        <div class="ai2027-copies-section">
-          <div class="copies-text">
-            <span id="copies-num">5,000</span> <span id="copies-str">Unreliable Agent copies thinking at 10x human speed</span>
-          </div>
-          <div class="copies-grid" id="ai2027-copies-grid"></div>
-        </div>
-
-        <div class="ai2027-stats-row">
-          <div class="stat-group">
-            <div class="stat-icon">🌀</div>
-            <div class="stat-col"><div class="stat-lbl">Approval</div><div class="stat-val" id="stat-approval">-25%</div></div>
-            <div class="stat-col"><div class="stat-lbl">Revenue</div><div class="stat-val" id="stat-revenue">US$122억/yr</div></div>
-            <div class="stat-col"><div class="stat-lbl">Valuation</div><div class="stat-val" id="stat-valuation">US$6098억</div></div>
-          </div>
-          <div class="stat-divider">|</div>
-          <div class="stat-group">
-            <div class="stat-icon">🌍</div>
-            <div class="stat-col"><div class="stat-lbl">Importance</div><div class="stat-val" id="stat-importance">1%</div></div>
-            <div class="stat-col"><div class="stat-lbl">Datacenters</div><div class="stat-val" id="stat-datacenters">US$3509억/yr</div></div>
-            <div class="stat-col"><div class="stat-lbl">Timeline</div><div class="stat-val" id="stat-timeline">2040</div></div>
-          </div>
-        </div>
-
-        <div class="ai2027-categories">
-          <div class="cat-col">
-            <div class="cat-lbl">Currently Exists</div>
-            <div class="cat-blocks" id="cat-exists"></div>
-          </div>
-          <div class="cat-col">
-            <div class="cat-lbl" style="color: #316C43;">Emerging Tech</div>
-            <div class="cat-blocks" id="cat-emerging"></div>
-          </div>
-          <div class="cat-col">
-            <div class="cat-lbl">Science Fiction</div>
-            <div class="cat-blocks" id="cat-scifi"></div>
-          </div>
-        </div>
-
-        <div class="ai2027-slider-container">
-          <input type="range" id="ai2027-slider" min="0" max="4" value="0" step="0.01" />
-        </div>
-      </div> <!-- Closes .ai2027-content -->
-
+      <div class="ai2027-slider-container">
+        <input type="range" id="ai2027-slider" min="0" max="4" value="0" step="0.01" />
+      </div>
     <!-- Fragment 1: Metrics + Logos overlay -->
     <div class="theory-overlay fragment" data-frag-group="4-0">
       <div class="metrics-col">

@@ -220,12 +220,12 @@
 
     // Slide 5 (index 4) — Theory: dim graph on fragment
     if (slideIdx === 4) {
-      const graph = document.getElementById('ai2027-diagram');
+      const content = document.getElementById('ai2027-content');
       if (direction === 'forward' && fragIdx === 0) {
-        graph.classList.add('dimmed');
+        content.classList.add('dimmed');
       }
       if (direction === 'backward' && fragIdx === 0) {
-        graph.classList.remove('dimmed');
+        content.classList.remove('dimmed');
       }
     }
 
@@ -284,7 +284,7 @@
       document.getElementById('timeline-container').classList.add('dimmed');
     }
     if (slideIdx === 4 && fragIdx >= 0) {
-      document.getElementById('ai2027-diagram').classList.add('dimmed');
+      document.getElementById('ai2027-content').classList.add('dimmed');
     }
     if (slideIdx === 5) {
       const chart = document.getElementById('layoffs-chart');
@@ -313,7 +313,7 @@
       document.getElementById('timeline-container').classList.remove('dimmed');
     }
     if (slideIdx === 4) {
-      document.getElementById('ai2027-diagram').classList.remove('dimmed');
+      document.getElementById('ai2027-content').classList.remove('dimmed');
     }
     if (slideIdx === 5) {
       const chart = document.getElementById('layoffs-chart');
